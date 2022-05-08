@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>命令行工具 - LosePrivacy API</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "\u547d\u4ee4\u884c\u5de5\u5177";
+    var mkdocs_page_input_path = "cli.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> LosePrivacy API</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">API</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">命令行工具</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#loseprivacy">什么是LosePrivacy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#loseprivacy-cli">loseprivacy-cli</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_1">下载</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#_2">配置</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_3">使用样例</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#_4">目前可搜索的不完整裤子列表</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">关于</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">LosePrivacy API</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>命令行工具</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="loseprivacy-api">免费社工库平台LosePrivacy API封装库</h1>
+<h2 id="loseprivacy">什么是LosePrivacy</h2>
+<p><a href="https://loseprivacy.icu">LosePrivacy</a>收录了近10多年全球著名的数据泄露事件及数据，方便用户真实掌握：我们哪些隐私信息被泄露了、隐私信息被谁泄露了。</p>
+<h2 id="loseprivacy-cli">loseprivacy-cli</h2>
+<p>LosePrivacy-cli可以让用户通过命令行快速查询社工库平台的数据，安全、高效。</p>
+<p>LosePrivacy-cli主要是基于LosePrivacy API v1的部分接口完成。关于LosePrivacy API的详细描述请移步：<a href="https://loseprivacy.github.io">LosePrivacy API</a>。</p>
+<h2 id="_1">下载</h2>
+<pre><code>git clone https://github.com/loseprivacy/loseprivacy-cli
+cd loseprivacy-cli
+</code></pre>
+
+<h3 id="_2">配置</h3>
+<p>打开example.py，填入参数apikey即可。
+apikey可以到LosePrivacy的开发者中心中获取。</p>
+<h2 id="_3">使用样例</h2>
+<p>搜索QQ号</p>
+<pre><code>search_qq(keyword)
+</code></pre>
+
+<p>搜索用户名/姓名</p>
+<pre><code>search_username(keyword)
+</code></pre>
+
+<p>搜索密码</p>
+<pre><code>search_password(keyword)
+</code></pre>
+
+<p>搜索手机号</p>
+<pre><code>search_phone(keyword)
+</code></pre>
+
+<p>搜索身份证号</p>
+<pre><code>search_identity(keyword)
+</code></pre>
+
+<p>搜索微博</p>
+<pre><code>search_weiboid(keyword)
+</code></pre>
+
+<p>搜索邮箱</p>
+<pre><code>search_email(keyword)
+</code></pre>
+
+<h2 id="_4">目前可搜索的不完整裤子列表</h2>
+<ul>
+<li>17173网络游戏:17173网络游戏用户数据</li>
+<li>人人网:人人网用户数据</li>
+<li>12306:12306部分用户数据</li>
+<li>天涯社区:天涯社区近4000万用户数据泄露</li>
+<li>7K7K游戏:7K7K用户数据</li>
+<li>Taobao:Taobao近2000万用户数据泄露</li>
+<li>QQ:QQ用户数据</li>
+<li>邮箱密码合集:多个安全事件中泄露的邮箱与密码数据合集</li>
+<li>银行高存款客户:银行VIP用户数据</li>
+<li>车主信息:70万车主信息数据</li>
+<li>户籍信息:中国大陆1000多万居民户籍信息数据泄露</li>
+<li>Facebook:Facebook脸书超过5亿多用户数据泄露</li>
+<li>借贷数据:暗网泄露的部分借贷数据</li>
+<li>台湾居民信息:台湾2000多万居民敏感信息泄露</li>
+<li>BreachCompilation:14亿邮箱密码明文泄露信息合集</li>
+<li>中国移动:中国移动多省份的用户信息泄露，涉及几千万用户</li>
+<li>搜云:搜云社工库数据泄露</li>
+<li>社保信息:38万深圳市社保数据泄露</li>
+<li>平安保险:平安保险10万用户数据</li>
+<li>小米论坛:小米论坛800万数据泄露</li>
+<li>永硕E盘:永硕E盘用户数据</li>
+<li>陌陌:陌陌3000万条数据泄露</li>
+<li>京东:京东商城用户数据</li>
+<li>QQ密码:历年来泄露的QQ密码数据合集</li>
+<li>手机密码合集:多个数据泄露事件中泄露的手机号与密码数据合集</li>
+<li>华住集团酒店:华住集团酒店的用户数据</li>
+<li>地下城与勇士DNF:地下城与勇士DNF近千万数据泄露</li>
+<li>开心网:开心网用户数据</li>
+<li>英雄联盟LoL:英雄联盟Lol共计1亿用户数据泄露</li>
+<li>Telegram:匿名聊天软件Telegram 4000多万用户数据泄露</li>
+<li>顺丰快递:顺丰快递信息数据</li>
+<li>CSDN:CSDN账号数据</li>
+<li>微博:微博用户数据</li>
+<li>网易邮箱:网易邮箱数据</li>
+<li>企查查:企查查全站数据</li>
+<li>QQ群:QQ群关系数据</li>
+</ul>
+              
+            </div>
+          </div>
+<div style="text-align:center;">LosePrivacy API</div>
+<br />
+<div style="text-align:center;">
+<a href="https://link.urls.icu/loseprivacy"><i class="fa fa-home">LosePrivacy隐私查询器官网</i></a> | 
+<a href="https://twitter.com/loseprivacy"><i class="fa fa-twitter">LosePrivacy Twitter</i></a></div>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href=".." style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../about/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
